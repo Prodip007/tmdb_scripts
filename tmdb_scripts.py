@@ -15,7 +15,6 @@ for movie in movies:
     new_movies.append(x)
 
 
-
 for movie in new_movies:
     res_json = requests.get('https://api.themoviedb.org/3/search/movie?api_key=75d0735db2c040c342d1d72122fb9043'+'&query='+movie)
     res = json.loads(res_json.content)
