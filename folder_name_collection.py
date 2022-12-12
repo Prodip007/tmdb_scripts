@@ -12,7 +12,8 @@ new_list_of_subdir = []
 
 for item in list_of_subdir:
     if os.path.isdir(dir_path+"/"+item):
-        new_list_of_subdir.append(item)
+        if(item[0] != '.'):
+            new_list_of_subdir.append(item)
 
 
 with open('./sub_directory_names.txt', 'w') as output_file:
